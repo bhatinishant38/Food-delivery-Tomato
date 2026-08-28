@@ -1,0 +1,43 @@
+.sidebar{
+    width: 17%;
+    min-height: 100vh;
+    border : 1.5px solid #a9a9a9;
+    border-top:0 ;
+    font-size: max(1vw,10px);
+    
+}
+.sidebar-options{
+    padding-top: 50px;
+    padding-left: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sidebar-option{
+    display: flex;
+    align-items: center;
+    border: 1px solid #a9a9a9;
+    gap: 12px;
+    border-right:  0px;
+    padding: 8px 10px;
+    border-radius: 3px 0px 0px 3px;
+    cursor: pointer;
+}
+@media (max-width :900px){
+    .sidebar-option p{
+        display: none;
+    }
+}
+/* active class name come inbuild in NavLink tag */
+.active{  
+    background-color: #fff0ed;
+    border-color: tomato;
+}
+@media (max-width :500px){
+    .sidebar-option {
+        padding: 6px;
+    }
+    .sidebar-option img{
+        width: 30px;
+    }
+}
