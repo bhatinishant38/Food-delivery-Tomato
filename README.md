@@ -110,40 +110,40 @@ All API routes are served from `http://localhost:5009`.
 
 ### Food
 
-| Method | Endpoint | Description |
-| --- | --- | --- |
-| `POST` | `/api/food/add` | Add a food item with an `image` upload |
-| `GET` | `/api/food/list` | List all food items |
+| Method | Endpoint           | Description                                |
+| ------ | ------------------ | ------------------------------------------ |
+| `POST` | `/api/food/add`    | Add a food item with an `image` upload     |
+| `GET`  | `/api/food/list`   | List all food items                        |
 | `POST` | `/api/food/remove` | Remove a food item using `{ "id": "..." }` |
 
 ### Users
 
-| Method | Endpoint | Description |
-| --- | --- | --- |
-| `POST` | `/api/user/register` | Register a user |
-| `POST` | `/api/user/login` | Sign in and receive a JWT |
+| Method | Endpoint             | Description               |
+| ------ | -------------------- | ------------------------- |
+| `POST` | `/api/user/register` | Register a user           |
+| `POST` | `/api/user/login`    | Sign in and receive a JWT |
 
 ### Cart
 
 Cart endpoints require the JWT in the `token` request header.
 
-| Method | Endpoint | Description |
-| --- | --- | --- |
-| `POST` | `/api/cart/add` | Add one item using `{ "itemId": "..." }` |
+| Method | Endpoint           | Description                                 |
+| ------ | ------------------ | ------------------------------------------- |
+| `POST` | `/api/cart/add`    | Add one item using `{ "itemId": "..." }`    |
 | `POST` | `/api/cart/remove` | Remove one item using `{ "itemId": "..." }` |
-| `POST` | `/api/cart/fetch` | Fetch the signed-in user's cart |
+| `POST` | `/api/cart/fetch`  | Fetch the signed-in user's cart             |
 
 ### Orders
 
 User order endpoints require the JWT in the `token` request header.
 
-| Method | Endpoint | Description |
-| --- | --- | --- |
-| `POST` | `/api/order/place` | Create an order and Stripe Checkout session |
-| `POST` | `/api/order/verify` | Verify or delete an order after payment |
-| `POST` | `/api/order/userorders` | List the signed-in user's orders |
-| `GET` | `/api/order/list` | List all orders for the admin dashboard |
-| `POST` | `/api/order/status` | Update an order status |
+| Method | Endpoint                | Description                                 |
+| ------ | ----------------------- | ------------------------------------------- |
+| `POST` | `/api/order/place`      | Create an order and Stripe Checkout session |
+| `POST` | `/api/order/verify`     | Verify or delete an order after payment     |
+| `POST` | `/api/order/userorders` | List the signed-in user's orders            |
+| `GET`  | `/api/order/list`       | List all orders for the admin dashboard     |
+| `POST` | `/api/order/status`     | Update an order status                      |
 
 Uploaded images are available at `/images/<filename>`.
 
