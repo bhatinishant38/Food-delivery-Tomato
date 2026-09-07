@@ -10,7 +10,7 @@ import { orderRouter } from './routes/orderRoutes.js'
 
 //app config
 const app = express()
-const PORT = 5009
+const port = process.env.PORT ||5009
 
 // middleware 
 app.use(express.json())
@@ -31,7 +31,7 @@ app.get('/',(req,res,next)=>{
 })
 
 
-app.listen(PORT ,()=>{
+app.listen(port ,()=>{
     console.log(`server running on http://localhost:${PORT}`)
 })
 
