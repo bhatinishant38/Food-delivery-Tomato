@@ -1,13 +1,12 @@
 .place-order{
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
     align-items: start;
-    justify-content: space-between;
     gap: 50px;
     margin-top: 100px;
 }
 .place-order-left{
     width: 100%;
-    max-width: max(30%,500px);
 }
 .place-order-left .title{
     font-size: 30px;
@@ -28,8 +27,38 @@
 }
 .place-order-right{
     width: 100%;
-    max-width: max(40%,500px);
 }
 .place-order .cart-total button{
     margin-top: 30px;
+}
+
+@media (max-width: 900px){
+    .place-order{
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin-top: 70px;
+    }
+
+    .place-order-left .title{
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 600px){
+    .place-order{
+        margin-top: 45px;
+    }
+
+    .place-order-left .title{
+        font-size: 25px;
+    }
+
+    .place-order-left .multi-fields{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .place-order .cart-total button{
+        width: 100%;
+    }
 }
